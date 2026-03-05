@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(https://img.freepik.com/vetores-gratis/fundo-de-gradiente-escuro-com-espaco-de-copia_53876-99548.jpg?semt=ais_hybrid&w=740&q=80);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .back-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;       /* centraliza os filhos horizontalmente */
+            gap: 20px;                 /* espaço entre os filhos (substitui margins soltas) */
+            width: 400px;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);  /* efeito vidro */
+            padding: 40px 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);  /* sombra no cartão */
+        }
+
+        /* Foto de perfil */
+
+        .foto-perfil {
+            border-radius: 50%;        /* círculo perfeito */
+            width: 120px;
+            height: 120px;
+            object-fit: cover;         /* não distorce a imagem */
+            border: 3px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* Nome */
+
+        .name {
+            color: white;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        /* Bio */
+
+        .bio {
+            color: rgba(255, 255, 255, 0.8);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.6;          /* espaço entre linhas */
+        }
+
+        /* Botões */
+
+        .div-botoes {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            background-color: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 8px 20px;
+            border-radius: 20px;
+            color: white;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;      /* animação suave no hover */
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.35);
+            transform: translateY(-2px);  /* sobe levemente */
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="back-box">
+
+        <img class="foto-perfil" src="https://i.pravatar.cc/150" alt="Foto de perfil">
+
+        <h1 class="name">Your Name</h1>
+
+        <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptas quas unde laudantium nemo id fugiat provident.</p>
+
+        <div class="div-botoes">
+            <button>Github</button>
+            <button>LinkedIn</button>
+            <button>Instagram</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
