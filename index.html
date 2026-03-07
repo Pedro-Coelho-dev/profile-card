@@ -14,14 +14,29 @@
             box-sizing: border-box;
         }
 
-        body {
+        button {
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: none;
+        }
+
+
+        body{
             background-image: url(https://i.pinimg.com/1200x/58/d9/f3/58d9f3d099f87b107c12ec0f6ff06b0a.jpg);
             background-position: center;
             background-size: cover;
+            height: 100vh;
+            overflow: hidden; /* ← impede o scroll */
+        }
+
+        .body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: calc(100vh - 60px);
         }
 
         .back-box {
@@ -37,12 +52,40 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);  /* sombra no cartão */
         }
 
+        .up-bar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);  /* efeito vidro */
+            padding: 15px 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .up-bar button{
+            background-color: rgba(255, 255, 255, 0);
+            padding: 8px 20px;
+            color: rgba(255, 255, 255, 0.643);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;      /* animação suave no hover */
+            font-family: Arial, sans-serif
+        }
+
+        .up-bar button:hover {
+            background-color: transparent; /* mantém o fundo transparente */
+            color: white; /* muda só a cor da fonte */
+        }
+
         /* Foto de perfil */
 
         .foto-perfil {
             border-radius: 50%;        /* círculo perfeito */
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;         /* não distorce a imagem */
             border: 3px solid rgba(255, 255, 255, 0.5);
         }
@@ -73,7 +116,7 @@
             gap: 10px;
         }
 
-        button {
+        .div-botoes button {
             background-color: rgba(255, 255, 255, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.4);
             padding: 8px 20px;
@@ -95,21 +138,31 @@
 
 <body>
 
-    <div class="back-box">
+    <div class="up-bar">
+        <button>About</button>
+        <button>Home</button>
+        <button>Projects</button>
+        <button>Others</button>
+    </div>
 
-        <img class="foto-perfil" src="https://i.pravatar.cc/150" alt="Foto de perfil">
+    <div class="body"> 
+        <div class="back-box">
 
-        <h1 class="name">Your Name</h1>
 
-        <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptas quas unde laudantium nemo id fugiat provident.</p>
+            <img class="foto-perfil" src="https://avatars.githubusercontent.com/u/230569403?v=4" alt="Foto de perfil">
 
-        <div class="div-botoes">
-            <button>Github</button>
-            <button>LinkedIn</button>
-            <button>Instagram</button>
+            <h1 class="name">Pedro Coelho</h1>
+
+            <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas quas unde laudantium nemo id fugiat provident.</p>
+
+            <div class="div-botoes">
+                <button>Github</button>
+                <button>LinkedIn</button>
+                <button>Instagram</button>
+            </div>
+
         </div>
-
     </div>
 
 </body>
